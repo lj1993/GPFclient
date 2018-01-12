@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UploadFile" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd1" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FileUploadMessage">
+    <wsdl:part name="parameters" element="tns:FileUploadMessage" />
+  </wsdl:message>
+  <wsdl:message name="FileUploadMessage_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_UploadFileMethod_OutputMessage" />
+  <wsdl:message name="DownFile">
+    <wsdl:part name="parameters" element="tns:DownFile" />
+  </wsdl:message>
+  <wsdl:message name="DownFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult">
+    <wsdl:part name="parameters" element="tns:DownFileResult" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult_Headers">
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_vlenup_InputMessage">
+    <wsdl:part name="parameters" element="tns:vlenup" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_vlenup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:vlenupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_GetFilesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilesList" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_GetFilesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpFile">
+    <wsdl:part name="parameters" element="tns:UpFile" />
+  </wsdl:message>
+  <wsdl:message name="UpFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_uploadvideo_OutputMessage" />
+  <wsdl:message name="IUploadFile_getvnum_InputMessage">
+    <wsdl:part name="parameters" element="tns:getvnum" />
+  </wsdl:message>
+  <wsdl:message name="IUploadFile_getvnum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getvnumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUploadFile">
+    <wsdl:operation name="UploadFileMethod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUploadFile/UploadFileMethod" name="FileUploadMessage" message="tns:FileUploadMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUploadFile/UploadFileMethodResponse" message="tns:IUploadFile_UploadFileMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUploadFile/DownLoadFile" name="DownFile" message="tns:DownFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUploadFile/DownLoadFileResponse" name="DownFileResult" message="tns:DownFileResult" />
+    </wsdl:operation>
+    <wsdl:operation name="vlenup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUploadFile/vlenup" message="tns:IUploadFile_vlenup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUploadFile/vlenupResponse" message="tns:IUploadFile_vlenup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUploadFile/GetFilesList" message="tns:IUploadFile_GetFilesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUploadFile/GetFilesListResponse" message="tns:IUploadFile_GetFilesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadvideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUploadFile/uploadvideo" name="UpFile" message="tns:UpFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUploadFile/uploadvideoResponse" message="tns:IUploadFile_uploadvideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getvnum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUploadFile/getvnum" message="tns:IUploadFile_getvnum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUploadFile/getvnumResponse" message="tns:IUploadFile_getvnum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUploadFile" type="tns:IUploadFile">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadFileMethod">
+      <soap:operation soapAction="http://tempuri.org/IUploadFile/UploadFileMethod" style="document" />
+      <wsdl:input name="FileUploadMessage">
+        <soap:header message="tns:FileUploadMessage_Headers" part="FileName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <soap:operation soapAction="http://tempuri.org/IUploadFile/DownLoadFile" style="document" />
+      <wsdl:input name="DownFile">
+        <soap:header message="tns:DownFile_Headers" part="FileName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownFileResult">
+        <soap:header message="tns:DownFileResult_Headers" part="FileSize" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vlenup">
+      <soap:operation soapAction="http://tempuri.org/IUploadFile/vlenup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesList">
+      <soap:operation soapAction="http://tempuri.org/IUploadFile/GetFilesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadvideo">
+      <soap:operation soapAction="http://tempuri.org/IUploadFile/uploadvideo" style="document" />
+      <wsdl:input name="UpFile">
+        <soap:header message="tns:UpFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:UpFile_Headers" part="FileSize" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvnum">
+      <soap:operation soapAction="http://tempuri.org/IUploadFile/getvnum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UploadFile">
+    <wsdl:port name="BasicHttpBinding_IUploadFile" binding="tns:BasicHttpBinding_IUploadFile">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile/basic" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

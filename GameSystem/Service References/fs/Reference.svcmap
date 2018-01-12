@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0305731d-e43b-430c-b211-556023f2531b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UploadFile.disco" MetadataType="Disco" ID="db8d7ef6-f85a-4dce-94ce-14900e46f53e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?disco" />
+    <MetadataFile FileName="UploadFile.wsdl" MetadataType="Wsdl" ID="f2e2bc30-ef25-4b45-8fb1-77fa28532c7c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?wsdl" />
+    <MetadataFile FileName="UploadFile.xsd" MetadataType="Schema" ID="d348202b-97d8-4d2a-b3e2-1e8a9d32aaef" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd3" />
+    <MetadataFile FileName="UploadFile1.xsd" MetadataType="Schema" ID="abd9ab55-f8ef-4950-92c9-71d9bc864fe9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd2" />
+    <MetadataFile FileName="UploadFile2.xsd" MetadataType="Schema" ID="8ed74489-b81a-4c37-bb68-8e6e21fa6437" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd1" />
+    <MetadataFile FileName="UploadFile3.xsd" MetadataType="Schema" ID="c2d5955e-d3d4-4f81-8bc4-4198891357c3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GPFserver/UploadFile?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
